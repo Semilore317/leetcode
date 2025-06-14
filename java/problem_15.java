@@ -8,13 +8,15 @@ public class problem_15 {
         List<List<Integer>> result = new ArrayList<>();
         int n = numbers.length;
 
+        // {1,1,3,4,5,6}
+
         for (int i = 0; i < n - 2; i++) {
             // Skip duplicates for the first element
             if (i > 0 && numbers[i] == numbers[i - 1]) {
                 continue;
             }
 
-            int left = i + 1, right = n - 1;
+            int left = i + 1, right = n - 1; // left and right pointer
             while (left < right) {
                 int sum = numbers[i] + numbers[left] + numbers[right];
                 if (sum < target) {
@@ -25,7 +27,7 @@ public class problem_15 {
                     // Found a triplet
                     result.add(Arrays.asList(numbers[i], numbers[left], numbers[right]));
                     // Skip duplicates for left pointer
-                    while (left < right && numbers[left] == numbers[left + 1]) {
+                    while (left < right && numbers[left] == numbers[left + 1]) { //
                         left++;
                     }
                     // Skip duplicates for right pointer
