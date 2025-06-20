@@ -1,17 +1,21 @@
 public class problem_74 {
-    public boolean searchMatrix(int[][] nMatrix, int target) {
-        if (nMatrix == null || nMatrix.length == 0 || nMatrix[0].length == 0) return false;
+    public boolean searchMatrix(int[][] matrix, int target) {
+        int left = 0;
+        int column_Length = matrix[0].length;
+        int right = matrix.length*column_Length - 1;
 
-        int row = 0;
-        int col = nMatrix[0].length - 1;
 
-        while (row < nMatrix.length && col >= 0) {
-            if (nMatrix[row][col] == target) {
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            int row = mid / column_Length;
+            int col = mid % column_Length;
+
+            if (matrix[row][col] == target) {
                 return true;
-            } else if (nMatrix[row][col] > target) {
-                col--;
-            } else {
-                row++;
+            }else if (matrix[row][col] < target) {
+                left = mid + 1;
+            }else if (matrix[row][col] > target) {
+                right = mid - 1;
             }
         }
         return false;
