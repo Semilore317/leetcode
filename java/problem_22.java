@@ -22,9 +22,11 @@ public class problem_22 {
         HashMap parentheses = new HashMap();
         parentheses.put(")", "(");
 
+        return (List<String>) parentheses;
 
     }
     public static void main(String[] args) {
-
+        problem_22 p = new problem_22();
+        System.out.println(p.generateParenthesis(3));
     }
 }

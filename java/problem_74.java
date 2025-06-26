@@ -8,6 +8,7 @@ public class problem_74 {
         while (left <= right) {
             int mid = (left + right) / 2;
             int row = mid / column_Length;
+
             int col = mid % column_Length;
 
             if (matrix[row][col] == target) {
