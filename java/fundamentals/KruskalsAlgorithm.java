@@ -1,7 +1,6 @@
 package fundamentals;
-
-// Java Program to Implement
-// Krushkal's Algorithm
+// Java Program to Implement The GOATed
+// Krushkal's Algorithm-
 import java.util.*;
 
 class Edge implements Comparable<Edge> {

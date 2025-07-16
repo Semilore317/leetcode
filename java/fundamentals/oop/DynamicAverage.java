@@ -14,6 +14,6 @@ public class DynamicAverage {
             sum += arr[i];
         }
         double average = sum / n;
-        System.out.println("The average of is: " + average);
+            System.out.println("The average of is: " + average);
     }
 }

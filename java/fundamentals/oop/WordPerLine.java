@@ -10,7 +10,7 @@ public class WordPerLine {
             System.out.println("No input provided.");
             return;
         }
-
+ 
         // Split the input string into words based on spaces
         String[] words = input.trim().split("\\s+");
 
