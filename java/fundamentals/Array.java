@@ -1,5 +1,5 @@
 package fundamentals;
-public class Array {
+public class Array<S> {
     private int[] items;
     private int count;
 
@@ -38,8 +38,8 @@ public class Array {
     }
 
 
-    public static void main(String[] args) {
-        Array numbers = new Array(10);
+    public void main(String[] args) {
+        Array<S> numbers = new Array<S>(10);
         numbers.print();
         numbers.insert(10);
         numbers.insert(20);
