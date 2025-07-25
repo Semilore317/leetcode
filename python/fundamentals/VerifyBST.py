@@ -5,10 +5,6 @@ class VerifyBST:
         self.root = root
 
     def verifyBST(self):
-        """
-        Verify if the tree is a valid BST.
-        Returns True if valid, False otherwise.
-        """
         def isValidBST(node, min_val, max_val):
             if not node:
                 return True
@@ -30,7 +26,7 @@ class VerifyBST:
 
         return is_valid and is_sorted
 
-# Testing like Java's main
+# Testing
 def main():
     # Test Case 1: Valid BST
     #       10

@@ -49,7 +49,7 @@ class Traversal:
                 queue.append(current.right)
         return result
 
-# Testing the Traversal class (similar to Java's main method)
+# Testing the Traversal class
 def main():
     # Create a sample binary tree:
     """

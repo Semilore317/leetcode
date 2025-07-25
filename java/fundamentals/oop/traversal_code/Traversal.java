@@ -109,7 +109,8 @@ public class Traversal {
                 Traversal.Node node = queue.poll();
                 current_level.add(Integer.valueOf(node.data));
 
-                if(node.left != null) {
+                if(
+                        node.left != null) {
                     queue.add(node.left);
                 }else if(node.right != null) {
                     queue.add(node.right);
