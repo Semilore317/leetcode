@@ -1,3 +1,5 @@
+package leetcode_problems;
+
 import java.util.Arrays;
 
 import static java.util.Collections.max;

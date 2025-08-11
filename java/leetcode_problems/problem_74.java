@@ -1,3 +1,5 @@
+package leetcode_problems;
+
 public class problem_74 {
     public boolean searchMatrix(int[][] matrix, int target) {
         int left = 0;

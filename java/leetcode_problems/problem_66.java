@@ -1,3 +1,5 @@
+package leetcode_problems;
+
 public class problem_66 {
     public int[] plusOne(int[] digits) {
         int n = digits.length;

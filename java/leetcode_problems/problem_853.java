@@ -1,5 +1,6 @@
+package leetcode_problems;
+
 import java.util.Arrays;
-import java.util.Comparator;
 
 /*
 853. Car Fleet

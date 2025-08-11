@@ -1,3 +1,5 @@
+package leetcode_problems;
+
 public class problem_875 {
     public int minEatingSpeed(int[] piles, int H) {
         if (piles.length == 1) {

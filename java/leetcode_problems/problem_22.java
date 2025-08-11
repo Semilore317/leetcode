@@ -1,4 +1,5 @@
-import java.util.ArrayList;
+package leetcode_problems;
+
 import java.util.HashMap;
 import java.util.List;
 

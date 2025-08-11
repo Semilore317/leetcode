@@ -1,3 +1,5 @@
+package leetcode_problems;
+
 import java.util.HashSet;
 
 public class problem_202 {

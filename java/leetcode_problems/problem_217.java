@@ -1,3 +1,5 @@
+package leetcode_problems;
+
 import java.util.Arrays;
 /*
 217. Contains Duplicate

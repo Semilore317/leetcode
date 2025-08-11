@@ -1,4 +1,4 @@
-import java.util.List;
+package leetcode_problems;
 
 /*
 206. Reverse Linked List

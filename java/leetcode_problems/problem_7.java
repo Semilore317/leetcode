@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
+package leetcode_problems;
 
 public class problem_7 {
     public int reverse(int x) {
