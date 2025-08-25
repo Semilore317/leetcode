@@ -8,7 +8,9 @@ public class FraudulentNotification {
     public static double median(int[] freq, int d) {
         // find the median of the last d elements using the frequency array
         int count = 0;
-        int mid = d / 2;
+        //{1,2,3,3,4,5}
+        //{0,1,1,2,1,1.....,0}
+        int mid = d / 2; // d is 200 from the constraints in the problem
         double median;
 
         if (d % 2 == 1) {
@@ -28,11 +30,11 @@ public class FraudulentNotification {
                     firstMid = i;
                 }
                 if (count > mid) {
-                    return (firstMid + i) / 2.0; // Average of two middle elements
+                    return (firstMid + i) / 2.0; // average of two middle elements
                 }
             }
         }
-        // should not reach here if inputs are valid
+        // shouldn't reach here with suitable inputs
         throw new IllegalStateException("Cannot compute median");
     }
 
@@ -43,8 +45,8 @@ public class FraudulentNotification {
         }
 
         int notifs = 0;
-        int maxValue = 200; // Problem constraint: expenditures are between 0 and 200
-        int[] freq = new int[maxValue + 1]; // Frequency array for values 0 to 200
+        int maxValue = 200; // constraint: expenditures are between 0 and 200
+        int[] freq = new int[maxValue + 1]; // frequency array for values 0 to 200
 
         // initialize frequency array for the first d elements
         for (int i = 0; i < d; i++) {
@@ -55,16 +57,15 @@ public class FraudulentNotification {
         for (int i = d; i < expenditure.size(); i++) {
             // compute median and limit
             double median = median(freq, d);
-            int limit = (int) (2 * median); // Use int to avoid floating-point precision issues in comparison
+            int limit = (int) (2 * median); // use int for precision in comparison
 
-            // check if current expenditure triggers a notification
             if (expenditure.get(i) >= limit) {
                 notifs++;
             }
 
             // update frequency array for sliding window
-            freq[expenditure.get(i - d)]--; // Remove oldest element
-            freq[expenditure.get(i)]++;     // Add newest element
+            freq[expenditure.get(i - d)]--; // remove oldest element
+            freq[expenditure.get(i)]++;     //add newest element
         }
 
         return notifs;
