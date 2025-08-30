@@ -4,7 +4,7 @@ import java.util.*;
 
 public class CustomSortedArray {
     public static void swapValues(List<Integer> list, int index1, int index2) {
-        // Check if indices are valid
+        // check if indices are valid
         if (index1 >= 0 && index1 < list.size() && index2 >= 0 && index2 < list.size()) {
             // Swap values using a temporary variable
             int temp = list.get(index1);
@@ -17,7 +17,7 @@ public class CustomSortedArray {
         int n = list.size();
         int moves = 0;
 
-        // Count even numbers
+        // count even numbers
         int evenCount = 0;
         for (int num : list) {
             if (num % 2 == 0) {
@@ -25,20 +25,20 @@ public class CustomSortedArray {
             }
         }
 
-        // Use two pointers: left for even numbers, right for odd numbers
+        // use two pointers: left for even numbers, right for odd numbers
         int left = 0;
         int right = n - 1;
 
         while (left < right) {
-            // Find the next odd number from the left
+            // find the next odd number from the left
             while (left < right && list.get(left) % 2 == 0) {
                 left++;
             }
-            // Find the next even number from the right
+            // find the next even number from the right
             while (left < right && list.get(right) % 2 == 1) {
                 right--;
             }
-            // If we found an odd number on the left and an even number on the right, swap them
+            // if there's an odd number on the left and an even number on the right, swap them
             if (left < right) {
                 swapValues(list, left, right);
                 moves++;
@@ -46,7 +46,6 @@ public class CustomSortedArray {
                 right--;
             }
         }
-
         return moves;
     }
     public static void main(String[] args) {
