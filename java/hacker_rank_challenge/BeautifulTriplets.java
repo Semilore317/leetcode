@@ -24,7 +24,7 @@ public class BeautifulTriplets {
         for (Integer i : arr) {
             frequency_arr[i]++;
         }
-
+        //i , i + d, i  + 2d
         // for each value i, check if value i+x and i+2x exist, if so, increment the count
         int count = 0;
         for (int i = 0; i <= maxValue(arr) ; i++) {
