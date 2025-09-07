@@ -13,8 +13,10 @@ public class GreedyFlorist {
         }
 
         Arrays.sort(prices, Collections.reverseOrder());
+        //ensures we buy the most expensive flowers first, so the lowest multipliers are used on the highest costs
 
         for (int i = 0; i < prices.length; i++) {
+        // (i/k) - number of times each friend has bought the flower
             totalCost += prices[i] * ((i/k) + 1);
         }
 
