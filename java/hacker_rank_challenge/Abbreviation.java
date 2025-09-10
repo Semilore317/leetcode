@@ -107,14 +107,14 @@ public class Abbreviation {
         System.out.println(abbreviation(a, b));
     }
 }
-
+//a  = "daB; // delete "d" and make "a" -> "A"
+// b = "AB";
 /*
-          b ->   ""     A      B      C
-        -------------------------------
-a   "" |  true  false  false  false
-    "d"|  true  false  false  false
-   "da"|  true   true  false  false
-  "daB"| false  false   true  false
- "daBc"| false  false   true   true
-"daBcd"| false  false   true   true
+   b ->   ""     A      AB    ABC
+a   ""   true  false  false  false
+    "d"  true  false  false  false
+   "da"  true   true  false  false
+  "daB" false  false   true  false
+ "daBc" false  false   true   true
+"daBcd" false  false   true   true
  */
