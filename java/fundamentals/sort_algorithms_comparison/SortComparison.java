@@ -266,10 +266,7 @@ private static Map<String, List<Long>> benchmarkAll(List<String> algos) {
                 for (String name : algos) {
                     int[] arr = base.clone(); // Clone to ensure the input is unsorted for each run
                     long t;
-                    switch (name) {
-                        case "Insertion Sort": t = measure(() -> insertionSort(arr)); break;
-                        case "Bubble Sort": t = measure(() -> bubbleSort(arr)); break;
-                        case "Selection Sort": t = measure(() -> selectionSort(arr)); break;
+                    switch (name) {+
                         case "Merge Sort": t = measure(() -> mergeSort(arr)); break;
                         case "Quick Sort": t = measure(() -> quickSort(arr)); break;
                         case "Bucket Sort": t = measure(() -> bucketSort(arr)); break;
